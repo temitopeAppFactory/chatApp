@@ -1,0 +1,14 @@
+{
+  "name": "app",
+  "main": "app.js",
+  "homepage": "https://github.com/temitopeAppFactory/chatApp",
+  "description": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,40 @@
+<div>
+
+<div>
+            <a href="#/">
+                <p class="logo"><span class="box"><span id="c">C</span><span id="h">h</span><span id="a1">a</span><span id="t">t</span><span id="a2">a</span><span id="r">r</span></span><sup>&reg;</sup></p>
+            </a>
+        </div>
+  
+  <div class="intiro">
+        <p class="intiro">Welcome to awesomeness!</p>
+        <p><em>Please enter your details below</em></p>
+      </div>
+  
+  <div ng-show="authCtrl.error">
+    <<span>{{authCtrl.error.message}}</span>
+  </div>
+  
+  <form ng-submit="authCtrl.register()">
+    <div class="typeIn">
+      <input class="typeIn2" type="email" class="form-control" placeholder="Email" ng-model="authCtrl.user.email">
+    </div>
+    <div class="typeIn">
+      <input class="typeIn2" type="password" class="form-control" placeholder="Password" ng-model="authCtrl.user.password">
+    </div>
+    <div class="typeIn">
+      <input class="typeIn2" type="text" class="form-control" placeholder="Display Name" ng-model="authCtrl.user.displayName">
+    </div>
+    <input id="sub" type="submit" value="Register">
+  </form>
+
+
+<p class="footer" style="margin-top: 100px;"><a class="footer" href="#/">Chatar<sup>&reg;</sup></a> Chat App &copy;
+    <script>
+      var today = new Date();
+      var dd = today.getFullYear();
+      document.write(dd);
+      </script>
+  </p>
+
+</div>

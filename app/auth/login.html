@@ -1,0 +1,32 @@
+<div>
+            <a href="#/">
+                <p class="logo"><span class="box"><span id="c">C</span><span id="h">h</span><span id="a1">a</span><span id="t">t</span><span id="a2">a</span><span id="r">r</span></span><sup>&reg;</sup></p>
+            </a>
+        </div>
+
+  <div class="intiro">
+            <em><p class="intiro"><a href="#/login">login</a> below to feel yourself</p></em>
+        </div>
+
+  <div ng-show="authCtrl.error">
+    <span>{{ authCtrl.error.message }}</span>
+  </div>
+  
+  <form ng-submit="authCtrl.login()">
+    <div class="typeIn">
+      <input type="email" class="typeIn2" placeholder="Email" ng-model="authCtrl.user.email">
+    </div>
+    <div class="typeIn">
+      <input type="password" class="typeIn2" placeholder="Password" ng-model="authCtrl.user.password">
+    </div>
+    <input id="sub" type="submit" value="Log In">
+    <p id="klose">Not yet a user? <a href="#/register">Register here!</a></p>
+  </form>
+
+<p class="footer" style="margin-top: 50px;"><a class="footer" href="#/">Chatar<sup>&reg;</sup></a> Chat App &copy;
+    <script>
+      var today = new Date();
+      var dd = today.getFullYear();
+      document.write(dd);
+      </script>
+  </p>
