@@ -4,8 +4,8 @@ angular.module('angularfireSlackApp')
 
 		authCtrl.user = {
 			email:'',
-			password:'',
-			displayName: ''
+			password:''
+			//displayName: ''
 		};
 
 		authCtrl.login = function(){
@@ -28,8 +28,4 @@ angular.module('angularfireSlackApp')
 			});
 		};
 	})
-	.controller('userHomeCtrl', ['$scope', function($scope){
-		var uCtrl = this;
-		$scope.name = 'timmy';
-	}])
 
