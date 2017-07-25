@@ -11,7 +11,9 @@ angular.module('angularfireSlackApp')
 		authCtrl.login = function(){
 
 			Auth.$signInWithEmailAndPassword(authCtrl.user.email, authCtrl.user.password).then(function (auth){
-				$state.go('userHome');
+				$state.go('home');
+				//or
+				//$state.go('userHome');
 			}, function(error){
 				authCtrl.error = error;
 			});
@@ -22,10 +24,11 @@ angular.module('angularfireSlackApp')
 			Auth.$createUserWithEmailAndPassword(authCtrl.user.email, authCtrl.user.password).then(function(user){
 				//authCtrl.login();
 				$state.go('home');
+				//$state.go('login');
 				/* to not login automatically after registration, use $state.go('home') instead of authCtrl.login() */
 			}, function(error){
 				authCtrl.error = error;
 			});
 		};
-	})
+	});
 

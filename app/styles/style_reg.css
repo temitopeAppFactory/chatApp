@@ -22,6 +22,9 @@ a {
 a:hover {
     background-color: red;
 }
+a:visited{
+    color: inherit;
+}
 
 p.logo {
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
@@ -141,4 +144,20 @@ span#a2{
 }
 span#r{
 	color: indigo;
+}
+
+.kodo{
+    text-decoration: none;
+
+}
+
+#logg{
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    text-decoration: none;
+}
+
+#logg:active{
+    box-shadow: 5px 5px 2.5px #888888;
+    text-decoration: none;
 }

@@ -12,7 +12,7 @@
       </div>
   
   <div ng-show="authCtrl.error">
-    <<span>{{authCtrl.error.message}}</span>
+    <span style="color: red;">{{authCtrl.error.message}}</span>
   </div>
   
   <form ng-submit="authCtrl.register()">
@@ -27,6 +27,7 @@
       <input class="typeIn2" type="text" class="form-control" placeholder="Display Name" ng-model="authCtrl.user.displayName">
     </div>
     -->
+    <p id="klose">Already a user? <a ui-sref="login">Login here!</a></p>
     <input id="sub" type="submit" value="Register">
   </form>
 

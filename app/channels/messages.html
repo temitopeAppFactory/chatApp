@@ -1,0 +1,27 @@
+
+<div>
+	<h1>{{ messagesCtrl.channelName }}</h1>
+</div>
+
+<div ng-repeat="message in messagesCtrl.messages">
+	<!-- <img ng-src="{{ channelsCtrl.getGravatar(message.uid) }}" /> -->
+	<div>
+		<div style="background-color: grey; display: inline-block; font-weight: bold; color: purple;">
+			{{ channelsCtrl.getDisplayName(message.uid) }}
+			<span>{{ message.timestamp | date: 'short' }}</span>
+		</div>
+		<div>
+			{{ message.body }}
+		</div>
+	</div>
+</div>
+
+<form ng-submit="messagesCtrl.sendMessage()">
+	
+	<div class="typeIn">
+		<input type="text" class="typeIn2" ng-model="messagesCtrl.message" placeholder="Type a message...">
+		<div>
+			<button id="sub" type="submit">Send</button>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,49 @@
+<div>
+    <a href="#/">
+        <p class="logo"><span class="box"><span id="c">C</span><span id="h">h</span><span id="a1">a</span><span id="t">t</span><span id="a2">a</span><span id="r">r</span></span><sup>&reg;</sup></p>
+    </a>
+</div>
+
+<div style="float: left; margin-left: 20px; margin-right: 20px; border-width: 1px; border-color: pink; border-style: solid; border-radius: 5%; padding-left: 5px; padding-top: 5px; height: 400px; width: 200px; margin-top: 20px;">
+	<div class="kodo">
+	<span style="width: 10%; border-color: green; border-radius: 100%; background-color: green;" ng-class="{online: channelsCtrl.profile.online}"></span>
+					<span style="font-weight: bolder;">Welcome {{ channelsCtrl.profile.displayName}}</span>
+		<div><a ui-sref="profile">Edit Display Name</a></div>
+</div>
+
+	<div class="kodo" style="margin-top: 20px;">
+		<div>
+			<div style="font-weight: bold;">Channels</div>
+			<div ng-repeat="channel in channelsCtrl.channels">
+				<a ui-sref="channels.messages({channelId: channel.$id})" ui-sref-active="selected"># {{channel.name}}</a>
+			</div>
+
+			<div>
+				<a ui-sref="channels.create">+ Create Channel</a>
+			</div>
+		</div>
+
+		<div style="margin-top: 20px; font-weight: bold;">Direct Messages</div>
+<div ng-repeat="user in channelsCtrl.users">
+  <a ng-if="user.$id !== channelsCtrl.profile.$id" ui-sref="channels.direct({uid: user.$id})" ui-sref-active="selected">
+  <span style="width: 10%; border-color: green; border-radius: 100%; background-color: green;" ng-class="{online: user.online}"></span>
+    {{ user.displayName }}
+  </a>
+</div>
+			<!-- <img class="user-pic" ng-src="{{ channelsCtrl.getGravatar(channelsCtrl.profile.$id)}}" alt="user pix" /> -->
+			<div style="margin-top: 20px;">
+				
+			</div>
+			<div style="margin-top: 20px;">
+
+				<div style="margin-top: 20px;">
+					
+					
+					<div style="width: 30%; text-align: center; font-weight: bold; background-color: red; border-radius: 5%;" id="logg"><a href="#" ng-click="channelsCtrl.logout()">Logout</a></div>
+				</div>
+			</div>
+		</div>
+</div>
+	<div class="message-pane">
+		<ui-view></ui-view>
+	</div>

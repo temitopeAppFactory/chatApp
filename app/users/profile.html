@@ -1,16 +1,22 @@
-<div class="page-wrapper">
-	<div class="page-header">
-		<h1>Edit Profile</h1>
+<div>
+	<a href="#/">
+                <p class="logo"><span class="box"><span id="c">C</span><span id="h">h</span><span id="a1">a</span><span id="t">t</span><span id="a2">a</span><span id="r">r</span></span><sup>&reg;</sup></p>
+            </a>
+</div>
+	<div>
+		<h3>Edit Profile</h3>
 	</div>
 
-	<form ng-submit="profileCtrl.updateProfile">
-		<p ng-hide="profileCtrl.profile.displayName">
+	<form ng-submit="profileCtrl.updateProfile()">
+		<p ng-hide="profileCtrl.profile.displayName" style="color: red;">
 			You'll need a display name before you can start chatting.
 		</p>
 
-		<div class="input-group">
-			<input required type="text" class="form-control" placeholder="Display Name" ng-model="profileCtrl.profile.displayName">
+		<div class="typeIn">
+			<input required type="text" class="typeIn2" placeholder="Display Name" ng-model="profileCtrl.profile.displayName">
 		</div>
-		<input type="submit" class="btn btn-default" value="Set Display Name">
+		<input id="sub" type="submit" value="Set Display Name">
 	</form>
-</div>
+	<!--<div>
+		{{profileCtrl.profile.displayName}}
+	</div>-->

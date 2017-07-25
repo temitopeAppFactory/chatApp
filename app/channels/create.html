@@ -1,0 +1,15 @@
+  	<!--<div>
+            <a href="#/">
+                <p class="logo"><span class="box"><span id="c">C</span><span id="h">h</span><span id="a1">a</span><span id="t">t</span><span id="a2">a</span><span id="r">r</span></span><sup>&reg;</sup></p>
+            </a>
+        </div> -->
+<div class="box">
+	<h1>Create a channel</h1>
+</div>
+
+<form ng-submit="channelsCtrl.createChannel()">
+	<div class="typeIn">
+		<input type="text" class="typeIn2" placeholder="Channel Name" ng-model="channelsCtrl.newChannel.name">
+	</div>
+	<input type="submit" id="sub" value="Create Channel">
+</form>

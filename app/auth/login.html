@@ -9,7 +9,7 @@
         </div>
 
   <div ng-show="authCtrl.error">
-    <span>{{ authCtrl.error.message }}</span>
+    <span style="color: red;">{{ authCtrl.error.message }}</span>
   </div>
   
   <form ng-submit="authCtrl.login()">
@@ -20,7 +20,7 @@
       <input type="password" class="typeIn2" placeholder="Password" ng-model="authCtrl.user.password">
     </div>
     <input id="sub" type="submit" value="Log In">
-    <p id="klose">Not yet a user? <a href="#/register">Register here!</a></p>
+    <p id="klose">Not yet a user? <a ui-sref="register">Register here!</a></p>
   </form>
 
 <p class="footer" style="margin-top: 50px;"><a class="footer" href="#/">Chatar<sup>&reg;</sup></a> Chat App &copy;
