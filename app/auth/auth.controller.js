@@ -1,6 +1,8 @@
 angular.module('angularfireSlackApp')
-	.controller('AuthCtrl', function(Auth, $state){
+	.controller('AuthCtrl', function(Auth, $state, $scope){
 		var authCtrl = this;
+
+		$scope.date = new Date();
 
 		authCtrl.user = {
 			email:'',

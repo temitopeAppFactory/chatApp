@@ -1,5 +1,5 @@
 <div>
-    <a href="#/">
+    <a id="logop" href="#/">
         <p class="logo"><span class="box"><span id="c">C</span><span id="h">h</span><span id="a1">a</span><span id="t">t</span><span id="a2">a</span><span id="r">r</span></span><sup>&reg;</sup></p>
     </a>
 </div>
@@ -8,7 +8,7 @@
 	<div class="kodo">
 	<span style="width: 10%; border-color: green; border-radius: 100%; background-color: green;" ng-class="{online: channelsCtrl.profile.online}"></span>
 					<span style="font-weight: bolder;">Welcome {{ channelsCtrl.profile.displayName}}</span>
-		<div><a ui-sref="profile">Edit Display Name</a></div>
+		<div><a style="color: purple;" ui-sref="profile">Edit Display Name</a></div>
 </div>
 
 	<div class="kodo" style="margin-top: 20px;">
@@ -19,7 +19,7 @@
 			</div>
 
 			<div>
-				<a ui-sref="channels.create">+ Create Channel</a>
+				<a style="color: purple;" ui-sref="channels.create">+ Create Channel</a>
 			</div>
 		</div>
 
@@ -47,3 +47,8 @@
 	<div class="message-pane">
 		<ui-view></ui-view>
 	</div>
+<div style="clear: both;">
+<hr>
+	<p class="footer" style="margin-top: 50px;"><a class="footer" href="#/">Chatar<sup>&reg;</sup></a> Chat App &copy; {{date | date:'yyyy'}}
+  </p>
+</div>

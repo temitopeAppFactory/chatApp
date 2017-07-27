@@ -1,6 +1,8 @@
 angular.module('angularfireSlackApp')
-	.controller('ChannelsCtrl', function($state, Auth, Users, profile, channels){
+	.controller('ChannelsCtrl', function($state, $scope, Auth, Users, profile, channels){
 		var channelsCtrl = this;
+
+		$scope.date = new Date();
 
 		Users.setOnline(profile.$id);
 

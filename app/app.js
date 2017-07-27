@@ -18,6 +18,7 @@ angular
     $stateProvider
       .state('home', {
         url: '/',
+        controller: 'AuthCtrl as authCtrl',
         templateUrl: 'home/home.html',
         resolve: {
           requireNoAuth: function($state, Auth){

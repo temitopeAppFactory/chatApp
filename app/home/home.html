@@ -1,5 +1,5 @@
   	<div>
-            <a href="#/">
+            <a id="logop" href="#/">
                 <p class="logo"><span class="box"><span id="c">C</span><span id="h">h</span><span id="a1">a</span><span id="t">t</span><span id="a2">a</span><span id="r">r</span></span><sup>&reg;</sup></p>
             </a>
         </div>
@@ -11,11 +11,6 @@
   </p>
 
 
-  	<p class="footer" style="margin-top: 100px;"><a class="footer" href="#/">Chatar<sup>&reg;</sup></a> Chat App &copy;
-	  <script>
-	  	var today = new Date();
-	  	var dd = today.getFullYear();
-	  	document.write(dd);
-	  	</script>
- 	</p>
-		
+  
+    <p class="footer" style="margin-top: 100px;"><a class="footer" href="#/">Chatar<sup>&reg;</sup></a> Chat App &copy; {{date | date:'yyyy'}}
+    </p>
